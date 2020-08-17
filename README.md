@@ -54,5 +54,8 @@ sudo systemctl status trojan
 # 开机自动启动 nginx 和 trojan-gfw
 sudo systemctl enable trojan nginx
 
+# 在docker 容器里面执行命令
+docker exec -ti bce1eda9cfda sh -c "node -v"
+
 参考链接：
 https://www.jianshu.com/p/c5dc7b5f5f0d
