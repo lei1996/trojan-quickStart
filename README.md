@@ -57,5 +57,9 @@ sudo systemctl enable trojan nginx
 # 在docker 容器里面执行命令
 docker exec -ti bce1eda9cfda sh -c "node -v"
 
+# 修复linux 上node 监控文件受限制
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+
 参考链接：
 https://www.jianshu.com/p/c5dc7b5f5f0d
